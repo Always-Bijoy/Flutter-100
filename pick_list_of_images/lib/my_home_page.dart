@@ -76,10 +76,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Wrap(
                       children: List.generate(
                         _image.length,
-                        (index) => Container(
+                        (index) => _image.asMap().containsKey(index) ? Text('index 0'): Container(
                           height: 80,
                           width: 80,
-                          child: Image.file(
+                          child:
+                          Image.file(
                             _image[index],
                             fit: BoxFit.cover,
                           ),
